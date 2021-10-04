@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Museum_Practitioner.Views.Profile" Title="Profile">
+    <ContentPage.Content>
+        
+        <AbsoluteLayout>
+            <BoxView AbsoluteLayout.LayoutBounds="0, 10, 200, 5" Color= "Orange" />
+            <BoxView AbsoluteLayout.LayoutBounds="0, 20, 250, 5" Color="Brown" />
+            <BoxView AbsoluteLayout.LayoutBounds="10, 0, 5, 150" Color="Red"/>
+            <BoxView AbsoluteLayout.LayoutBounds="20, 0, 5, 200" Color="Black"/>
+            <Label Text="Profile" TextColor="Black" FontSize="24"  FontAttributes="Bold" AbsoluteLayout.LayoutBounds="30, 25, AutoSize, AutoSize"/>
+            <BoxView HeightRequest="2" HorizontalOptions="Fill" Color="Black" AbsoluteLayout.LayoutBounds="20, 55, 300, 5"/>
+            <ScrollView AbsoluteLayout.LayoutBounds="30, 60, 325,600" Padding="0,5,5,5">
+                <StackLayout AbsoluteLayout.LayoutBounds="30, 65, 320, AutoSize" >
+                    <Image Source="WA0012.jpg" />
+                    <Editor FontSize="Body"  VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Text="Abu Solomon Edet
+B.Sc. (Hons.) Lond U.K.; M.Sc., Ph.D. Hokkaido, Japan; FICA
+Elder Dr .Abu Solomon  Edet FICA. Established the company in 2000.For over forty years he has been in the business of museums and heritage 
+development through his tremendous wealth of experience he consistently ensures the maintenance of high standards in the general operation 
+of the company. Elder Dr. Abu Solomon Edet trained in preservation and conservation of cultural property He undertook degree courses in 
+archaeology for his first degree and later studied for master's and doctorate degrees in applied Environmental Earth Science to study  
+monuments and sites deterioration. He is a registered member of the International Council of Museums (ICOM) and International Council of 
+Monuments and Sites (ICOMOS). These professional bodies regulate the practise of preservation and conservation and  adhere strictly to the 
+ethics of the profession. Elder Dr. Abu Solomon Edet was the Assistant Secretary General of the Museum Association of Nigeria, a post he held 
+for several years. He has attended several short and long term courses, seminars and workshop on preservation, conservation, management and 
+training programmes. He is presently the Chairman Museum sub-committee, Olusegun Obasanjo Presidential Library project and a consultant to 
+so many museums and cultural associations concern with the promotion of Nigerian heritage and tourism. Elder Dr. Abu Solomon Edet is responsible 
+for the overall management of the company, as well as the control of production and services. He has travelled extensively in 
+pursuit of his professional career. He has dedicated a lot of energy and resources  in ensuring and promoting best practice 
+in heritage, art and monuments services. He was recently conferred with Seal of Excellence Award for distinguished 
+professional contribution to public services. He was honoured by Rotary International District 9140 Ekulu, 
+Enugu with distinguished International Service Award in recognition of his distinctive professional  contribution and 
+trail-brazing achieving in conservation and environmental protection." IsReadOnly="True" IsSpellCheckEnabled="False"/>
+                </StackLayout></ScrollView>
+            
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

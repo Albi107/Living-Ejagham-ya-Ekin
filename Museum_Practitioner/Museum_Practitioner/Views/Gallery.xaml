@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Museum_Practitioner.Views.Gallery" Title="Gallery">
+    <ContentPage.Content>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+        <CarouselView  x:Name="Pictures" Grid.Row="0" PeekAreaInsets="0">
+                <CarouselView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="5"/>
+                </CarouselView.ItemsLayout>
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame HasShadow="True" BackgroundColor="White" CornerRadius="10" Margin="2" HeightRequest="600" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                            <StackLayout>
+                                <Label Text="{Binding Name}" TextColor="Black" FontSize="Title" HorizontalTextAlignment="Center"/>
+                                <Image Source="{Binding Image}" Aspect="AspectFill"/>
+                                <Label Text="{Binding Description}" HorizontalTextAlignment="Center" FontSize="Body" TextColor="Black"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+            <IndicatorView  IndicatorColor="LightGray" SelectedIndicatorColor="Black" Grid.Row="1"  />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

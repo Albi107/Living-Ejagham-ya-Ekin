@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Museum_Practitioner.Views.Contact" Title="Contact">
+    <ContentPage.Content>
+        <StackLayout  HorizontalOptions="Center" VerticalOptions="Center">
+            <Frame BorderColor="LightGray" HasShadow="True" CornerRadius="12" HeightRequest="320" WidthRequest="200" VerticalOptions="Center" HorizontalOptions="Center">
+                
+                    <StackLayout>
+                        <Label Text="E-mail" FontSize="Title" FontAttributes="Bold"/>
+                        <BoxView Color="SaddleBrown" HeightRequest="2" HorizontalOptions="Fill" />
+                        <Label Text="abu_edet@gmail.com" FontSize="Subtitle"/>
+                    <Label Text="  "/>
+                    <Label Text="Website" FontSize="Title" FontAttributes="Bold"/>
+                    <BoxView Color="SaddleBrown" HeightRequest="2" HorizontalOptions="Fill" />
+                    <Label Text="http://www.hacs.org.ng" FontSize="Subtitle"/>
+
+                </StackLayout>
+                
+            </Frame>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

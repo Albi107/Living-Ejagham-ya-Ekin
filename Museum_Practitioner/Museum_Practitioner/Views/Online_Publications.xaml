@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Museum_Practitioner.Views.Online_Publications"
+             Title="Online publication">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <CarouselView  x:Name="Opubs" Grid.Row="0" PeekAreaInsets="0">
+                <CarouselView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="5" SnapPointsAlignment="Center" SnapPointsType="MandatorySingle"/>
+                </CarouselView.ItemsLayout>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <AbsoluteLayout >
+                            <BoxView AbsoluteLayout.LayoutBounds="0, 10, 200, 5" Color= "Orange" />
+                            <BoxView AbsoluteLayout.LayoutBounds="0, 20, 250, 5" Color="Brown" />
+                            <BoxView AbsoluteLayout.LayoutBounds="10, 0, 5, 150" Color="Red"/>
+                            <BoxView AbsoluteLayout.LayoutBounds="20,0, 5, 180" Color="Black"/>
+                            <Label Text="{Binding BookName}" TextColor="Black" FontSize="24"  FontAttributes="Bold" AbsoluteLayout.LayoutBounds="30, 25, 350, AutoSize"/>
+                            <Label Text="{Binding Authors}" AbsoluteLayout.LayoutBounds="30, 140, Autosize, AutoSize"/>
+                            <Label Text="{Binding Year}" AbsoluteLayout.LayoutBounds="30, 160, Autosize, AutoSize"/>
+
+                            <ScrollView AbsoluteLayout.LayoutBounds="30, 190, 325, 550" Padding="0,5,5,5">
+                                <StackLayout>
+                                    <Image Source="{Binding BookImage}" Aspect="AspectFill"/>
+                                    <Editor FontSize="Body" IsReadOnly="True" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Text="{Binding BookDescription}" WidthRequest="350" />
+                                    <Button Text="Read more"/>
+                                </StackLayout>
+                            </ScrollView>
+                        </AbsoluteLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

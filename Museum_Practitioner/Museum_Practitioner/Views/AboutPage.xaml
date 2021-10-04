@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Museum_Practitioner.Views.AboutPage"
+             xmlns:vm="clr-namespace:Museum_Practitioner.ViewModels"
+             Title="Library" >
+    
+        
+   
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel  />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+        <StackLayout BackgroundColor="GhostWhite" > 
+
+        <SearchBar Placeholder="Search items..."  CancelButtonColor="red" PlaceholderColor="LightGray" TextColor="Black" TextTransform="Lowercase"
+           HorizontalTextAlignment="Center" FontSize="Medium" FontAttributes="Italic" BackgroundColor="White" />
+
+        <Frame BorderColor="Black" CornerRadius="0" Padding="15">
+            <StackLayout>
+                <Label Text="Micro blog" FontSize="Title" FontAttributes="Bold"/>
+                <BoxView Color="SaddleBrown" HeightRequest="2" HorizontalOptions="Fill" />
+                <Label Text="For updates on recent publications and contributions to knowledge!" FontSize="Subtitle"/>
+            </StackLayout>
+        </Frame>
+       
+        <ScrollView > <Grid Margin="15,5,15,15" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="190" />
+                <RowDefinition Height="220" />
+                <RowDefinition Height="200" />
+                    <RowDefinition Height="20" />
+                </Grid.RowDefinitions>
+            <StackLayout  Grid.Column="0" Grid.Row="0" HeightRequest="150" WidthRequest="100"  >
+                    <ImageButton  Clicked="ImageButton_Clicked" Source="articles.png" BorderColor="Gray" BorderWidth="0.5" Aspect="AspectFill" HeightRequest="150" WidthRequest="100"  CornerRadius="10" VerticalOptions="Center">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale"
+                            Value="1" />
+                                    </VisualState.Setters>
+                                </VisualState>
+ 
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale"
+                            Value="0.9" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+                    <Label Text="Publication" HorizontalOptions="Start" FontSize="14" FontAttributes="Bold" />
+                </StackLayout>
+            <StackLayout  Grid.Column="1" Grid.Row="0" HeightRequest="150" WidthRequest="100"  >
+                    <ImageButton Clicked="ImageButton_Clicked_1" Source="books_icon1.png" BorderColor="Gray" BorderWidth="0.5" Aspect="AspectFill" HeightRequest="150" WidthRequest="100"  CornerRadius="10" VerticalOptions="Center">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale"
+                            Value="1" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="Scale"
+                            Value="0.9" />
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+                    <Label Text="Chapters in Books" HorizontalOptions="Start" FontSize="14" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="0" HeightRequest="150" WidthRequest="100"  >
+                    <ImageButton  Clicked="ImageButton_Clicked_2" Source="online1.png" BorderColor="gray" BorderWidth="0.5" Aspect="AspectFill" HeightRequest="150" WidthRequest="100"  CornerRadius="10" VerticalOptions="Center" >
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.9" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+                    <Label Text="On-line publications" HorizontalOptions="Start" FontSize="14" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout  Grid.Column="0" Grid.Row="1" HeightRequest="150" WidthRequest="100">
+                    <ImageButton Clicked="ImageButton_Clicked_3" Source="museum1.png" BorderColor="Gray" BorderWidth="0.5" Aspect="AspectFill" HeightRequest="150" WidthRequest="100"  CornerRadius="10" VerticalOptions="Center">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.9" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+                    <Label Text="Museums" HorizontalOptions="Start" FontSize="14" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout  Grid.Column="1" Grid.Row="1" HeightRequest="150" WidthRequest="100">
+                    <ImageButton Clicked="ImageButton_Clicked_4" Source="lectures1.png" BorderColor="Gray" BorderWidth="0.5" Aspect="AspectFill" HeightRequest="150" WidthRequest="100"  CornerRadius="10" VerticalOptions="Center">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.9" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+                    <Label Text="Conference Papers" HorizontalOptions="Start" FontSize="14" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout  Grid.Column="2" Grid.Row="1" HeightRequest="150" WidthRequest="100">
+                    <ImageButton Clicked="ImageButton_Clicked_5" Source="workshop1.png" BorderColor="gray" BorderWidth="0.5" Aspect="AspectFill" HeightRequest="150" WidthRequest="100"  CornerRadius="10" VerticalOptions="Center">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.9" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+                    <Label Text="Workshop" HorizontalOptions="Start" FontSize="14" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout  Grid.Column="0" Grid.Row="2" HeightRequest="150" WidthRequest="100">
+                    <ImageButton Clicked="ImageButton_Clicked_6" Source="conference1.png" BorderColor="gray" BorderWidth="0.5" Aspect="AspectFill" HeightRequest="150" WidthRequest="100"  CornerRadius="10" VerticalOptions="Center">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.9" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+                    <Label Text="Other Articles Papers and Lectures" HorizontalOptions="Start" FontSize="14" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout  Grid.Column="1" Grid.Row="2" HeightRequest="150" WidthRequest="100"  >
+                    <ImageButton Clicked="ImageButton_Clicked_7" Source="poster1.png" BorderColor="gray" BorderWidth="0.5" Aspect="AspectFill" HeightRequest="150" WidthRequest="100"  CornerRadius="10" VerticalOptions="Center">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.9" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+                    <Label Text="Special Posters" HorizontalOptions="Start" FontSize="14" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout  Grid.Column="2" Grid.Row="2" HeightRequest="150" WidthRequest="100"  >
+                    <ImageButton Clicked="ImageButton_Clicked_8" Source="exhibition1.png" BorderColor="gray" BorderWidth="0.5" Aspect="AspectFit" HeightRequest="150" WidthRequest="100"  CornerRadius="10" VerticalOptions="Center">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.9" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    </ImageButton>
+                    <Label Text="Exhibition Designed and Curated" HorizontalOptions="Start" FontSize="14" FontAttributes="Bold"/>
+            </StackLayout>
+        </Grid></ScrollView>
+        
+    </StackLayout>
+    
+</ContentPage>

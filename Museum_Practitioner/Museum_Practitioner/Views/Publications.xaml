@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Museum_Practitioner.Views.Publication" Title="Publications">
+    <ContentPage.Content >
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            
+            <CarouselView  x:Name="Pubs" Grid.Row="0" PeekAreaInsets="0">
+                <CarouselView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="5" SnapPointsAlignment="Center" SnapPointsType="MandatorySingle"/>
+                </CarouselView.ItemsLayout>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <AbsoluteLayout Padding="5,5,5,5">
+                            
+                           <Label Text="{Binding BookName}" TextColor="Black" FontSize="24"  FontAttributes="Bold" AbsoluteLayout.LayoutBounds="5, 10, Autosize, AutoSize"/>
+                            <Label Text="{Binding Authors}" AbsoluteLayout.LayoutBounds="5, 140, Autosize, AutoSize"/>
+                            <Label Text="{Binding Year}" AbsoluteLayout.LayoutBounds="5, 160, Autosize, AutoSize"/>
+
+                            <ScrollView AbsoluteLayout.LayoutBounds="5, 190, 325, 550" >
+                               <StackLayout>
+                                    <Image Source="{Binding BookImage}" Aspect="AspectFill"/>
+                                    <Editor FontSize="Body" IsReadOnly="True" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" TextColor="Black" Text="{Binding BookDescription}" />
+                                    
+                                   <Button Text="Read more"/>
+                                   
+                                    <Frame/>
+                                </StackLayout>
+                               
+                            </ScrollView>
+                        </AbsoluteLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            
+        </Grid>
+       
+    </ContentPage.Content>
+</ContentPage>
