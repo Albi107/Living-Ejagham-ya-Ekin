@@ -3,6 +3,8 @@ using Museum_Practitioner.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
+using System.Threading.Tasks;
 
 namespace Museum_Practitioner
 {
@@ -12,14 +14,14 @@ namespace Museum_Practitioner
         public App()
         {
             InitializeComponent();
-
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
+         
         }
 
         protected override void OnStart()
         {
-           
+            
         }
 
         protected override void OnSleep()
@@ -29,5 +31,7 @@ namespace Museum_Practitioner
         protected override void OnResume()
         {
         }
+
     }
+    
 }

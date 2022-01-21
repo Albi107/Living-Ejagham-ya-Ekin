@@ -1,27 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Museum_Practitioner.Views.Exhibition_Designed_and_Curated">
+             x:Class="Museum_Practitioner.Views.Exhibition_Designed_and_Curated"
+             Title="Exhibition Designed and Curated">
     <ContentPage.Content>
-        <StackLayout>
-            <Frame BorderColor="LightGray"
-       HasShadow="True"
-       CornerRadius="12"
-       HeightRequest="120"
-       WidthRequest="120">
-                <Frame.Background>
-                    <!-- StartPoint defaults to (0,0) -->
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="Yellow"
-                          Offset="0.1" />
-                        <GradientStop Color="Green"
-                          Offset="1.0" />
-                    </LinearGradientBrush>
-                </Frame.Background>
-            </Frame>
-            <Label Text="Exhibition Designed and Curated!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <CarouselView  x:Name="Exbt" Grid.Row="0" PeekAreaInsets="0" >
+                <CarouselView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="5" SnapPointsAlignment="Center" SnapPointsType="MandatorySingle"/>
+                </CarouselView.ItemsLayout>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <AbsoluteLayout Padding="5,5,5,5">
+                            <Label Text="{Binding BookName}" TextColor="Black" FontSize="24"  FontAttributes="Bold" AbsoluteLayout.LayoutBounds="5, 10, AutoSize, AutoSize"/>
+                            <Label Text="{Binding Authors}" AbsoluteLayout.LayoutBounds="5, 160, Autosize, AutoSize"/>
+                            <Label Text="{Binding Year}" AbsoluteLayout.LayoutBounds="5, 180, Autosize, AutoSize"/>
+
+                            <ScrollView AbsoluteLayout.LayoutBounds="5, 200, 350, 550">
+                                <ScrollView.Content>
+                                    <StackLayout>
+                                        <Image Source="{Binding BookImage}" Aspect="AspectFill"/>
+                                        <Editor FontSize="Body" IsReadOnly="True" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Text="{Binding BookDescription}" />
+                                        <Button  Margin="0,10,0,0" Text="Learn more" BackgroundColor="{StaticResource Key=Primary}" TextColor="White" Clicked="Button_Clicked" CommandParameter="{Binding ButtonClicked}" />
+<Frame/>
+                                    </StackLayout>
+                                </ScrollView.Content>
+                            </ScrollView>
+                        </AbsoluteLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

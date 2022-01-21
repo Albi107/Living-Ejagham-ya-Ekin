@@ -80,30 +80,27 @@
     -->
     <Shell.FlyoutBackground>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="Orange" Offset="0.3" />
-            <GradientStop Color="Yellow" Offset="0.6" />
+            <GradientStop Color="Orange" Offset="0.4" />
+            <GradientStop Color="Yellow" Offset="0.8" />
             <GradientStop Color="WhiteSmoke" Offset="1.0" />
         </LinearGradientBrush>
-
     </Shell.FlyoutBackground>
 
-    <FlyoutItem Title="Library"  Icon="book_shelf.png">
+    <FlyoutItem Title="Library" Icon="book_shelf.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
+    </FlyoutItem>
+    <FlyoutItem FlyoutDisplayOptions="AsSingleItem" Title="About" Icon="icon_about.png">
+        <ShellContent  Title="About" Icon="icon_about.png" Route="Profile" ContentTemplate="{DataTemplate local:Profile}" />
+        <ShellContent Title="Contact" Icon="contact.png" Route="Contact" ContentTemplate="{DataTemplate local:Contact}" />
+    </FlyoutItem>
+     <FlyoutItem Title="Book Shop" Icon="share.png"> 
+        <ShellContent Route="BookShop" ContentTemplate="{DataTemplate local:BookShop}" />
     </FlyoutItem>
     <FlyoutItem Title="Gallery" Icon="photo_gallery.png">
         <ShellContent Route="Gallery" ContentTemplate="{DataTemplate local:Gallery}" />
     </FlyoutItem>
-    
-    <FlyoutItem FlyoutDisplayOptions="AsSingleItem" Title="About" Icon="icon_about.png">
-        <ShellContent  Title="About" Icon="icon_about.png" Route="Profile" ContentTemplate="{DataTemplate local:Profile}" />
-    <ShellContent Title="Contact" Icon="contact.png" Route="Contact" ContentTemplate="{DataTemplate local:Contact}" />
-            
-    </FlyoutItem>
-    <FlyoutItem Title="Share" Icon="share.png"> 
-        <ShellContent Route="itemspage" ContentTemplate="{DataTemplate local:ItemsPage}" />
-    </FlyoutItem>
-    
-    
+   
+     
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
     <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">

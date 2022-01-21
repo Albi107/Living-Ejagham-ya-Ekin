@@ -2,5 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.museum_practitioner" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="29" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-	<application android:label="Museum_Practitioner.Android" android:theme="@style/MainTheme"></application>
+	<application android:label="Museum_Practitioner.Android" android:theme="@style/MainTheme" android:icon="@drawable/MP"></application>
+<queries>
+  <intent>
+    <action android:name="android.intent.action.VIEW" />
+    <data android:scheme="http"/>
+  </intent>
+  <intent>
+    <action android:name="android.intent.action.VIEW" />
+    <data android:scheme="https"/>
+  </intent>
+</queries>
 </manifest>

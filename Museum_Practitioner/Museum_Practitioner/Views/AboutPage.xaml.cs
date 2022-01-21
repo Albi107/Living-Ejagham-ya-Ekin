@@ -29,12 +29,12 @@ namespace Museum_Practitioner.Views
 
         private async void ImageButton_Clicked_3(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Foreign_Conference_Papers_Presented());
+            await Navigation.PushAsync(new Museums());
         }
 
         private  async void ImageButton_Clicked_4(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Local_Conference_Papers());
+            await Navigation.PushAsync(new Conference_Papers());
         }
 
         private  async void ImageButton_Clicked_5(object sender, EventArgs e)
@@ -55,6 +55,28 @@ namespace Museum_Practitioner.Views
         private  async void ImageButton_Clicked_8(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Exhibition_Designed_and_Curated());
+        }
+        private void ImageButton_Clicked_9(object sender, EventArgs e)
+        {
+            //await Navigation.PushAsync(new Exhibition_Designed_and_Curated());
+        }
+        private void ImageButton_Clicked_10(object sender, EventArgs e)
+        {
+            //await Navigation.PushAsync(new Exhibition_Designed_and_Curated());
+        }
+        private void ImageButton_Clicked_11(object sender, EventArgs e)
+        {
+            //await Navigation.PushAsync(new Exhibition_Designed_and_Curated());
+        }
+
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
+
+        private void SearchBar_SearchButtonPressed(object sender, EventArgs e)
+        {
+
         }
     }
 }

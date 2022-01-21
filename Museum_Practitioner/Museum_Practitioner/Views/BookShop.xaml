@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Museum_Practitioner.Views.BookShop"
+             Title="Book Shop">
+    <ContentPage.Content>
+        <Grid BackgroundColor="White" Padding="5" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                
+            </Grid.RowDefinitions>
+            <CollectionView x:Name="NewBooks">
+            <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="5">
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding Image}" WidthRequest="90" HeightRequest="100" Grid.Column="0" Aspect="AspectFill" BackgroundColor="LightGray"/>
+                            <StackLayout Orientation="Vertical" Grid.Column="1"  >
+                                <Label Text="{Binding Name}" FontSize="Title" FontAttributes="Bold" TextColor="{StaticResource Primary}"/>
+                                <Label Text="{Binding Description}" FontSize="Body" TextColor="Black"/>
+                                <Button Text="Buy" CornerRadius="10" Clicked="Button_Clicked" TextColor="White" BackgroundColor="{StaticResource Primary}" WidthRequest="50"/>
+                            </StackLayout>
+                            
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

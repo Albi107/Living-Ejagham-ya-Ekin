@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace Museum_Practitioner.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Foreign_Conference_Papers_Presented : ContentPage
+    public partial class Splash : ContentPage
     {
-        public Foreign_Conference_Papers_Presented()
+        public Splash()
         {
             InitializeComponent();
+                        
         }
     }
 }

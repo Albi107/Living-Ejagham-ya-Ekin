@@ -15,12 +15,14 @@ namespace Museum_Practitioner.Views
         public Gallery()
         {
             InitializeComponent();
+            
         }
         protected override void OnAppearing()
         {
             base.OnAppearing();
             Pictures.ItemsSource = new GalleryP.GalleryService().GetGalleriesList();
         }
+        
 
     }
 }

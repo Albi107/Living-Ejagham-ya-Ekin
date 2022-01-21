@@ -6,7 +6,7 @@
         <Grid BackgroundColor="White">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="50"/>
+               
             </Grid.RowDefinitions>
         <CarouselView  x:Name="Pictures" Grid.Row="0" PeekAreaInsets="0">
                 <CarouselView.ItemsLayout>
@@ -15,14 +15,14 @@
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
-                        <Frame HasShadow="True" BackgroundColor="White" CornerRadius="10" Margin="2" HeightRequest="600" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
-                            <StackLayout>
-                                <Label Text="{Binding Name}" TextColor="Black" FontSize="Title" HorizontalTextAlignment="Center"/>
-                                <Image Source="{Binding Image}" Aspect="AspectFill"/>
-                                <Label Text="{Binding Description}" HorizontalTextAlignment="Center" FontSize="Body" TextColor="Black"/>
-                            </StackLayout>
-                        </Frame>
-                    </StackLayout>
+                            <Frame HasShadow="True" BackgroundColor="Gray" CornerRadius="10" Margin="2" HeightRequest="400" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                                <StackLayout>
+                                    <Label Text="{Binding Name}" TextColor="White" FontSize="Title" HorizontalTextAlignment="Center" TextTransform="Uppercase" />
+                                    <Image Source="{Binding Image}" Aspect="AspectFit"/>
+                                    <Label Text="{Binding Description}" HorizontalTextAlignment="Center" FontSize="Body" TextColor="White"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>

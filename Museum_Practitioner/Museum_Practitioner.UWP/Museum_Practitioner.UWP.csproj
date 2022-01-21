@@ -304,6 +304,13 @@
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>
     </AndroidResource>
+    <Content Include="Assets\abianat.jpg" />
+    <Content Include="Assets\calmun.jpg" />
+    <Content Include="Assets\cme.PNG" />
+    <Content Include="Assets\cmll.PNG" />
+    <Content Include="Assets\etara.jpg" />
+    <Content Include="Assets\lagmus.jpg" />
+    <Content Include="Assets\mnl.PNG" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
@@ -347,7 +354,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.12" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>

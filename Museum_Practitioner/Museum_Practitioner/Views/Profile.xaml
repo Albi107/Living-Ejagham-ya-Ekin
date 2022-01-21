@@ -3,37 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Museum_Practitioner.Views.Profile" Title="Profile">
     <ContentPage.Content>
-        
-        <AbsoluteLayout>
-            <BoxView AbsoluteLayout.LayoutBounds="0, 10, 200, 5" Color= "Orange" />
-            <BoxView AbsoluteLayout.LayoutBounds="0, 20, 250, 5" Color="Brown" />
-            <BoxView AbsoluteLayout.LayoutBounds="10, 0, 5, 150" Color="Red"/>
-            <BoxView AbsoluteLayout.LayoutBounds="20, 0, 5, 200" Color="Black"/>
-            <Label Text="Profile" TextColor="Black" FontSize="24"  FontAttributes="Bold" AbsoluteLayout.LayoutBounds="30, 25, AutoSize, AutoSize"/>
-            <BoxView HeightRequest="2" HorizontalOptions="Fill" Color="Black" AbsoluteLayout.LayoutBounds="20, 55, 300, 5"/>
-            <ScrollView AbsoluteLayout.LayoutBounds="30, 60, 325,600" Padding="0,5,5,5">
-                <StackLayout AbsoluteLayout.LayoutBounds="30, 65, 320, AutoSize" >
-                    <Image Source="WA0012.jpg" />
-                    <Editor FontSize="Body"  VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Text="Abu Solomon Edet
-B.Sc. (Hons.) Lond U.K.; M.Sc., Ph.D. Hokkaido, Japan; FICA
-Elder Dr .Abu Solomon  Edet FICA. Established the company in 2000.For over forty years he has been in the business of museums and heritage 
+        <ScrollView AbsoluteLayout.LayoutBounds="30, 60, 325,600" Padding="0,5,5,5">
+            <StackLayout AbsoluteLayout.LayoutBounds="30, 65, 320, AutoSize" >
+                <Image Source="WA0012.jpg" />
+                <Label Text="B.Sc. (Hons.) Lond U.K.; M.Sc., Ph.D. Hokkaido, Japan; FICA" FontSize="Caption" TextColor="red"/>
+                <Editor FontSize="Body"  VerticalOptions="Center" HorizontalOptions="CenterAndExpand" TextColor="Black" Text="Elder Dr .Abu Solomon  Edet FICA. Established the company in 2000.For over forty years he has been in the business of museums and heritage 
 development through his tremendous wealth of experience he consistently ensures the maintenance of high standards in the general operation 
-of the company. Elder Dr. Abu Solomon Edet trained in preservation and conservation of cultural property He undertook degree courses in 
+of the company. He trained in preservation and conservation of cultural property and undertook degree courses in 
 archaeology for his first degree and later studied for master's and doctorate degrees in applied Environmental Earth Science to study  
 monuments and sites deterioration. He is a registered member of the International Council of Museums (ICOM) and International Council of 
 Monuments and Sites (ICOMOS). These professional bodies regulate the practise of preservation and conservation and  adhere strictly to the 
-ethics of the profession. Elder Dr. Abu Solomon Edet was the Assistant Secretary General of the Museum Association of Nigeria, a post he held 
+ethics of the profession. He was the Assistant Secretary General of the Museum Association of Nigeria, a post he held 
 for several years. He has attended several short and long term courses, seminars and workshop on preservation, conservation, management and 
 training programmes. He is presently the Chairman Museum sub-committee, Olusegun Obasanjo Presidential Library project and a consultant to 
-so many museums and cultural associations concern with the promotion of Nigerian heritage and tourism. Elder Dr. Abu Solomon Edet is responsible 
+so many museums and cultural associations concern with the promotion of Nigerian heritage and tourism.He is responsible 
 for the overall management of the company, as well as the control of production and services. He has travelled extensively in 
 pursuit of his professional career. He has dedicated a lot of energy and resources  in ensuring and promoting best practice 
-in heritage, art and monuments services. He was recently conferred with Seal of Excellence Award for distinguished 
+in heritage, art and monuments services. He was conferred with Seal of Excellence Award for distinguished 
 professional contribution to public services. He was honoured by Rotary International District 9140 Ekulu, 
 Enugu with distinguished International Service Award in recognition of his distinctive professional  contribution and 
-trail-brazing achieving in conservation and environmental protection." IsReadOnly="True" IsSpellCheckEnabled="False"/>
-                </StackLayout></ScrollView>
-            
-        </AbsoluteLayout>
+trail-brazing achieving in conservation and environmental protection.
+                        
+Employment History: He specializes in and has taught archaeology and museum practice at the undergraduate and postgraduate 
+levels for over ten years in various universities. He worked as Head of Conservation Services at National 
+Commission for Museum and Monuments. He also served as the Curator In-charge of the eastern zone of Museum of National 
+Unity Enugu. While in the commission, he developed conservation projects and facilitated the preservation studies of 
+the Cross River Monoliths sites towards development of tourism. He is presently Senior Lecturer and an historian of 
+Archaeology at the Department of History and International Studies, University of Calabar, Nigeria. 
+                        
+Education : He graduated from universities in two continents Europe and Asia. He obtained a B.Sc. (Hons.) 
+from the Institute of Archaeology, University of London, U.K. and M.Sc., Ph.D. from Graduate School of 
+Environment Earth Science Hokkaido University, Japan. International Centre for the Study of the Preservation and Restoration of 
+Cultural Property ICCROM Rome, Italy. Diploma on Conservation Management, University of London, UK. Grants/Fellowships: i. Awarded 
+Japanese Monbukagakusho Grant 1993-1994 as Guest Researcher, Tokyo National Institute of Cultural Properties Ueno-Koen, Tokyo, Japan.
+ii. Awarded Fellow, Institute of Corporate Administration (FICA) of Nigeria by the Governing Council. 2007." IsReadOnly="True" IsSpellCheckEnabled="True"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

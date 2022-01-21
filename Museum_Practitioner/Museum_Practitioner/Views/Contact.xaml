@@ -9,11 +9,11 @@
                     <StackLayout>
                         <Label Text="E-mail" FontSize="Title" FontAttributes="Bold"/>
                         <BoxView Color="SaddleBrown" HeightRequest="2" HorizontalOptions="Fill" />
-                        <Label Text="abu_edet@gmail.com" FontSize="Subtitle"/>
+                        <Label Text="abu_edet@gmail.com" FontSize="Subtitle" TextColor="Black"/>
                     <Label Text="  "/>
                     <Label Text="Website" FontSize="Title" FontAttributes="Bold"/>
                     <BoxView Color="SaddleBrown" HeightRequest="2" HorizontalOptions="Fill" />
-                    <Label Text="http://www.hacs.org.ng" FontSize="Subtitle"/>
+                    <Label Text="http://www.hacs.org.ng" FontSize="Subtitle" TextColor="Black"/>
 
                 </StackLayout>
                 

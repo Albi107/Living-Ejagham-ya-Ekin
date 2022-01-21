@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Museum_Practitioner.Views.Museums" Title="Museums">
+    <ContentPage.Content>
+        <Grid BackgroundColor="Gray">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            
+            <CarouselView  x:Name="Images" Grid.Row="0" PeekAreaInsets="0">
+                
+                    <CarouselView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="5" />
+                </CarouselView.ItemsLayout>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout BackgroundColor="DarkGray">
+                            
+                                <Frame HasShadow="True" BackgroundColor="gray" CornerRadius="15" Margin="2" HeightRequest="600" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                                <ScrollView><StackLayout>
+                                    <Label Text="{Binding Name}" TextColor="White" FontSize="Title" HorizontalTextAlignment="Center"/>
+                                    <Image Source="{Binding Image}" Aspect="AspectFill"/>
+                                    <Label Text="{Binding Description}" HorizontalTextAlignment="Center" FontSize="Body" TextColor="White"/>
+                                </StackLayout>
+                            </ScrollView></Frame>
+                            
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+                
+            </CarouselView>
+            
+            <IndicatorView  IndicatorColor="LightGray" SelectedIndicatorColor="White" Grid.Row="1"  />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
